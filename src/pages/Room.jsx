@@ -1,0 +1,89 @@
+import RoomCard from "../componenets/RoomCard";
+function Room(){
+    const rooms=[
+        {
+        id:1,
+        no:"101",
+        type:"Luxury",
+        price:"31000",
+        image:"https://plus.unsplash.com/premium_photo-1661964402307-02267d1423f5?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id:2,
+      no:"102",
+        type:"Deluxe",
+        price:"14000",
+        image:"https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+    },
+     {
+      id:3,
+      no:"103",
+        type:"Suite",
+        price:"10000", 
+         image:"https://images.unsplash.com/photo-1631049552057-403cdb8f0658?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    },
+    {
+      id:4,
+      no:"104",
+        type:"Suite",
+        price:"10000",   
+        image:"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id:5,
+      no:"105",
+        type:"Deluxe",
+        price:"19000",  
+        image:"https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    },
+    {
+      id:6,
+      no:"106",
+        type:"Deluxe",
+        price:"22000", 
+        image:"https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
+    },
+    {
+      id:7,
+      no:"103",
+        type:"Deluxe",
+        price:"25000", 
+        image:"https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",  
+    },
+    {
+      id:8,
+      no:"108",
+        type:"Suite",
+        price:"10000",
+        image:"https://images.unsplash.com/photo-1631049421450-348ccd7f8949?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",   
+    },
+    {
+      id:9,
+      no:"109",
+        type:"Suite",
+        price:"15000",
+        image:"https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",   
+    },
+    {
+      id:10,
+      no:"110",
+        type:"Suite",
+        price:"10000",
+        image:"https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",   
+    },
+    ];
+    return(
+        <div className="room-page">
+            <h1>Availabe Rooms</h1>
+            <div className="room-container">
+            {rooms.map((room)=>(
+                <RoomCard key={room.id}
+                room={room}/>
+            ))}
+        </div>
+    </div>
+
+    );
+}
+export default Room;
