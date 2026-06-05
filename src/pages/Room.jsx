@@ -72,6 +72,27 @@ function Room(){
         price:"10000",
         image:"https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",   
     },
+     {
+      id:11,
+      no:"111",
+        type:"Luxury",
+        price:"56000",
+        image:"https://static.vecteezy.com/system/resources/thumbnails/044/020/296/small/sumptuous-circular-bed-in-art-deco-inspired-upscale-suite-exuding-luxury-and-opulence-photo.jpeg",   
+    },
+    {
+      id:12,
+      no:"112",
+      type:"Luxury",
+      price:"54000",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoz2ZDMoIpP8D9w4rOFi3iEZPcwbS5TLRrA&s",
+    },
+    {
+      id:13,
+      no:113,
+      type:"Luxury",
+      price:"38900",
+      image:"https://media.istockphoto.com/id/934123520/photo/3d-rendering-modern-luxury-bedroom-suite-in-resort-with-bathroom.jpg?s=612x612&w=0&k=20&c=Es7IaaoVajNKqxU6estoa1TbxoSUy86MzGz48p78Oj0=",
+    },
     ];
     return(
         <div className="room-page">
