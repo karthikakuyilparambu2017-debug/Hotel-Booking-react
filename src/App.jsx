@@ -7,7 +7,7 @@ import AddBooking from "./pages/AddBooking";
 import { useEffect, useState } from "react";
 import "./App.css";
 import BookingHistory from "./pages/BookingHistory";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 function App(){
     const [bookings,setBookings]=useState(()=>{
     const savedBooking=localStorage.getItem("bookings");
