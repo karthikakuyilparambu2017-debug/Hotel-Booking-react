@@ -6,6 +6,7 @@ function Navbar(){
              <Link to="/rooms">Room</Link> | {" "}
              <Link to="/booking">Room Booking</Link> | {" "}
              <Link to="/history">History</Link> | {" "}
+             <Link to="/dashboard">Dashboard</Link> | {" "}
         </nav>
     );
 }

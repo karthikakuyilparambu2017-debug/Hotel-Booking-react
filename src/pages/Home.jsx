@@ -18,7 +18,7 @@ function Home(){
 </p>
              <Link  to="/rooms"><button className="b">Book Now</button></Link>  {" "}
 <footer className="hotel-footer">
-    <p> Beach Road, Palakkad, Kerala</p>
+    <p> kongad, Palakkad, Kerala</p>
     <p> +91 98765 43210 |  WhatsApp: +91 98765 43210</p>
     <p> Instagram: @grandluxuryhotel</p>
     <p>info@grandluxuryhotel.com</p>

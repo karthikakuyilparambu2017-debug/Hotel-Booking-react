@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-function AddBooking({bookings,setBookings}){
+function AddBooking({bookings,setBookings,edit,setEditing}){
     const [name,setName]=useState("");
     const [no,setRoom]=useState("");
     const [contact,setContact]=useState("");
@@ -9,7 +9,17 @@ function AddBooking({bookings,setBookings}){
     const [checkout,setCheckout]=useState("");
     const [type,setType]=useState("");
     const navigate=useNavigate();
-
+     useEffect(()=>{
+        if(edit){
+            setName(edit.name);
+             setRoom(edit.no);
+              setContact(edit.contact);
+             setAddress(edit.address);
+              setCheckin(edit.checkin);  
+               setCheckout(edit.checkout);
+               setType(edit.type);
+        }
+     },[edit]);
     const handleSubmit=(e)=>{
         e.preventDefault();
           if(!name.trim()){
@@ -38,12 +48,31 @@ function AddBooking({bookings,setBookings}){
         }
 
          const roomExict=bookings.some(
-            (booking)=>booking.no==no.trim()
+            (booking)=>
+                booking.no===no.trim() &&
+                booking.id!==edit?.id
         );
         if(roomExict){
             alert("Room already Booked");
             return;
         }
+        if(edit){
+            const editing=bookings.map(
+                (booking)=>booking.id===edit.id ?{
+                    ...booking,
+                    name:name.trim(),
+                    no:no.trim(),
+                    contact:contact.trim(),
+                    address:address.trim(),
+                    type:type.trim(),
+                    checkin:checkin.trim(),
+                     checkout:checkout.trim(),
+                }
+                :booking
+            );
+            setBookings(editing);
+            setEditing(null);
+        } else{
         const newBooking={
             id: Date.now(),
             name:name.trim(),
@@ -54,7 +83,9 @@ function AddBooking({bookings,setBookings}){
             checkin,
             checkout,
         };
+    
         setBookings([...bookings,newBooking]);
+    }
         navigate("/History");
 
     };
@@ -77,7 +108,7 @@ function AddBooking({bookings,setBookings}){
            <input type="date" placeholder="Checkout Date" value={checkout} onChange={(e)=>setCheckout(e.target.value)}/>
            <br /><br />
 
-           <button>BOOK</button>
+           <button type="submit">{edit ?"update Booking":" Room book"}</button>
            </form>
         </div>
         </div>
