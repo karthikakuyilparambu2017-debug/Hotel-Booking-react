@@ -1,16 +1,21 @@
-# React + Vite
+The Hotel Room Booking System is a web-based application developed using React.js that allows users to browse available rooms, view room details, make reservations, and manage their booking history. The application provides a simple and user-friendly interface for booking hotel rooms online.
+Users can view room information, check pricing details, book rooms, edit reservations, and cancel bookings. The system also maintains booking history for better reservation management.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+> Home Page
+> View Available Rooms
+> Room Details Page
+> Room Booking Form
+> Booking History
+> Edit Booking Information
+> Cancel Bookings
+> Search Booking Records
+> Local Storage Support
+> Responsive Design
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Technologies Used
+> React.js
+> JavaScript (ES6)
+> HTML5
+> CSS3
+> React Router DOM
